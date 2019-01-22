@@ -1,0 +1,28 @@
+{
+  "name": "roman-to-decimal-converter",
+  "version": "1.0.0",
+  "description": "Converts roman numeral to decimal equivalent",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Martin-MacDonald/roman-to-decimal-converter.git"
+  },
+  "keywords": [
+    "decimal",
+    "roman",
+    "numeral",
+    "converter"
+  ],
+  "author": "Martin MacDonald",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Martin-MacDonald/roman-to-decimal-converter/issues"
+  },
+  "homepage": "https://github.com/Martin-MacDonald/roman-to-decimal-converter#readme",
+  "devDependencies": {
+    "jest": "^23.6.0"
+  }
+}
