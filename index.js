@@ -15,8 +15,9 @@ const translations = [
 ];
 
 module.exports = (roman) => {
-  if (!checkIfValidRoman(roman)) {
-    throw new Error();
+  const regex = /^M{0,3}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$/;
+  if (!regex.test(roman)) {
+    throw new TypeError('not valid numeral');
   }
   let decimal = 0;
   for (let i = 0; i < translations.length; i++) {
@@ -26,22 +27,5 @@ module.exports = (roman) => {
     }
   }
   return decimal;
-}
-
-function checkIfValidRoman(roman) {
-  let lastIndex = 0;
-  while (roman.length > 0) {
-    for (let i = 0; i < translations.length; i++) {
-      if (roman.indexOf(translations[i].roman) === 0) {
-        if (lastIndex > i) {
-          return false;
-        }
-        lastIndex = i;
-        roman = roman.replace(translations[i].roman, '');
-        break;
-      }
-    }
-  }
-  return true;
 }
 
